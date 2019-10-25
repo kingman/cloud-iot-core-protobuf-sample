@@ -26,22 +26,22 @@ Follow the [Python Generated Code](https://developers.google.com/protocol-buffer
 
 To make it easier to run commands when you create cloud resources, set environment variables in Cloud Shell to hold the names and properties of the resources:
 
-        export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
-        export EVENT_TOPIC=proto-event
-        export REGISTRY_ID=proto-reg
-        export REGION=europe-west1
-        export DEVICE_ID=proto-device
-        export PRIVATE_KEY_FILE='rsa_private.pem'
-        export ALGORITHM='RS256'
-        export CA_CERTS='roots.pem'
+    export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
+    export EVENT_TOPIC=proto-event
+    export REGISTRY_ID=proto-reg
+    export REGION=europe-west1
+    export DEVICE_ID=proto-device
+    export PRIVATE_KEY_FILE='rsa_private.pem'
+    export ALGORITHM='RS256'
+    export CA_CERTS='roots.pem'
 
 
 ## Generate device key pair
 
 In cloud shell run:
 
-        cd $HOME/cloud-iot-core-protobuf-sample/client
-        openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused"
+    cd $HOME/cloud-iot-core-protobuf-sample/client
+    openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused"
 
 ## Set up cloud resources
 
