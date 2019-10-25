@@ -25,7 +25,7 @@ def main():
     for i in range(5):
         measurement.index = i+1
         client.send_event(measurement.SerializeToString())
-        print "Message {} sent.".format(i+1)
+        print('Message {} sent.'.format(i+1))
         time.sleep(1)
 
     client.disconnect_from_server()
