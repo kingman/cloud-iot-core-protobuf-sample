@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tutorial;
+
+message Measurement {
+  string temperature = 1;
+  string pressure = 2;
+  string humidity = 3;
+  int32 index = 4;
+}
+
